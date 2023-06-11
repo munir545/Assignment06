@@ -1,7 +1,6 @@
-const search = "";
+const search = prompt("Search");
 
-//filter data
-
+// get time
 blood_donorList.map((donor) => {
   const star_date = new Date(donor.last_donate_date);
   const current_date = new Date();
@@ -19,6 +18,7 @@ blood_donorList.map((donor) => {
   }
 });
 
+//filter data
 const result = blood_donorList.filter(
   (data) =>
     data.name.toLowerCase() === search.toLowerCase() ||
